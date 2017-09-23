@@ -358,9 +358,7 @@ For further reference on property initializer and concise method syntax see: htt
 
 ## Destructuring
 
-Destructuring simplifies the extraction of values from arrays and objects into variables.
-
-Previously in order to pull data out of an object and assign it to variables this was necessary:
+Destructuring simplifies the extraction of values from arrays and objects into variables.Previously in order to pull data out of an object and assign it to variables this was necessary:
 
 ```javascript
 let person = {
@@ -385,9 +383,24 @@ console.log(firstName); // outputs "Tom"
 console.log(lastName); // outputs "Dale"
 ```
 
-On the right side of the equals sign is a reference to the object being destructured, this is known as the initializer.
+On the right-hand side of the assignment is a reference to the object being destructured, this is sometimes known as the initializer.
 
-On the left side of the equals sign are variables that reference the value of the property with the same name on the object. This is similar to the property initializer syntax discussed in object literals.
+On the left-hand side of the assignment are the values to be unpacked from the sourced variable.
+
+Note that in above example the variable has the same as the property on the object. This is similar to the property initializer syntax discussed in object literals.
+
+However, this does not have to be the case, you can assign to new variable names. For example:
+```javascript
+let person = {
+  firstName: "Tom"
+  lastName: "Dale"
+};
+
+let {firstName: foo, lastName: bar} = person;
+
+console.log(foo); // outputs "Tom"
+console.log(bar); // outputs "Dale"
+```
 
 Destructuring can also be used on arrays:
 
