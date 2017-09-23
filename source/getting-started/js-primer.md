@@ -385,7 +385,7 @@ console.log(firstName); // outputs "Tom"
 console.log(lastName); // outputs "Dale"
 ```
 
-On the right side of the equals side is a reference to the object being destructured, this is known as the initializer.
+On the right side of the equals sign is a reference to the object being destructured, this is known as the initializer.
 
 On the left side of the equals sign are variables that reference the value of the property with the same name on the object. This is similar to the property initializer syntax discussed in object literals.
 
@@ -400,7 +400,7 @@ console.log(firstPerson); // outputs "Link"
 console.log(secondPerson; // outputs "Zelda"
 ```
 
-And, destructuring can be used to assign values without a declaration using destructuring expressions.
+And, destructuring can be used to assign values without a declaration using destructuring expressions:
 
 ```javascript
 let person = {
@@ -416,7 +416,7 @@ let lastName = "Katz";
 
 Note the parens around the curly braces surrounding the assignment statement and the lack of the variable declaration `let`. This denotes the destructuring is an expression instead of a declaration. Because destructuring assignments are expressions they can be used any where a value is expected, such as in passing a value to a function.
 
-Default values can also be assigned to variables in destructuring as well to prevent them from being undefined.
+Default values can also be assigned to variables in destructuring as well to prevent them from being undefined:
 
 ```javascript
 let person = {
@@ -429,7 +429,7 @@ let {firstName = "George", middleName= "Oscar", lastName = "Bluth"} = person;
 console.log(middleName); // outputs "Oscar"
 ```
 
-Destructuring can also be used to unpack nested objects and arrays.
+And, destructuring can be used to unpack more complicated structures like nested objects and arrays:
 ```javascript
 let person =
   {
