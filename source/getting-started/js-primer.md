@@ -358,11 +358,11 @@ For further reference on property initializer and concise method syntax see: htt
 
 ## Destructuring
 
-Destructuring simplifies the extraction of values from arrays and objects into variables.Previously in order to pull data out of an object and assign it to variables this was necessary:
+Destructuring simplifies the extraction of values from arrays and objects into variables. Previously in order to pull data out of an object and assign it to variables this was necessary:
 
 ```javascript
 let person = {
-  firstName: "Gob"
+  firstName: "Gob",
   lastName: "Bluth"
 };
 
@@ -373,7 +373,7 @@ In ES6 with destructuring this can be achieved with less ceremony:
 
 ```javascript
 let person = {
-  firstName: "Tom"
+  firstName: "Tom",
   lastName: "Dale"
 };
 
@@ -387,12 +387,10 @@ On the right-hand side of the assignment is a reference to the object being dest
 
 On the left-hand side of the assignment are the values to be unpacked from the sourced variable.
 
-Note that in above example the variable has the same as the property on the object. This is similar to the property initializer syntax discussed in object literals.
-
-However, this does not have to be the case, you can assign to new variable names. For example:
+Note that in above example the variable has the same as the property on the object. This is similar to the property initializer syntax discussed in object literals. However, this does not have to be the case, you can assign to new variable names. For example:
 ```javascript
 let person = {
-  firstName: "Tom"
+  firstName: "Tom",
   lastName: "Dale"
 };
 
@@ -417,23 +415,23 @@ And, destructuring can be used to assign values without a declaration using dest
 
 ```javascript
 let person = {
-  firstName: "Tom"
+  firstName: "Tom",
   lastName: "Dale"
 };
 
-let firstName = "Yehuda" ;
+let firstName = "Yehuda";
 let lastName = "Katz";
 
 ( {firstName, lastName} = person );
 ```
 
-Note the parens around the curly braces surrounding the assignment statement and the lack of the variable declaration `let`. This denotes the destructuring is an expression instead of a declaration. Because destructuring assignments are expressions they can be used any where a value is expected, such as in passing a value to a function.
+Note the parenthesis around the curly braces surrounding the assignment statement and the lack of the variable declaration `let`. This denotes the destructuring is an expression instead of a declaration. Because such destructuring assignments are expressions they can be used any where a value is expected, such as in passing a value to a function.
 
-Default values can also be assigned to variables in destructuring as well to prevent them from being undefined:
+Default values can also be assigned to variables in destructuring to prevent them from being undefined:
 
 ```javascript
 let person = {
-  firstName: "George"
+  firstName: "George",
   lastName: "Bluth"
 };
 
