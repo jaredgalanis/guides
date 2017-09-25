@@ -457,7 +457,6 @@ let { family: familyMembers, family: {siblings:[sister]} } = person;
 
 console.log(familyMembers.mother); // outputs "Jane Smith"
 console.log(sister); // outputs "Lindsay Bluth Fünke"
-
 ```
 
 [For more on destructuring assignments.](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
