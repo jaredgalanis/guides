@@ -423,15 +423,7 @@ let person = {
   lastName: "Bluth"
 };
 
-<<<<<<< HEAD
 let {firstName= "George", middleName= "Oscar", lastName= "Bluth"} = person;
-=======
-let {
-  firstName = "George",
-  middleName = "Oscar",
-  lastName = "Bluth"
-} = person;
->>>>>>> b0111bcbe35ba41959d8a1a18d3dfa0dd376926b
 
 console.log(middleName); // outputs "Oscar"
 ```
@@ -450,16 +442,7 @@ let person =
     }
   };
 
-<<<<<<< HEAD
 let { family:familyMembers, family: {siblings:[sister]} } = person;
-=======
-let {
-  family: familyMembers,
-  family: {
-    siblings: [ sister ]
-  }
-} = person;
->>>>>>> b0111bcbe35ba41959d8a1a18d3dfa0dd376926b
 
 console.log(familyMembers.mother); // outputs "Jane Smith"
 console.log(sister); // outputs "Lindsay Bluth Fünke"
