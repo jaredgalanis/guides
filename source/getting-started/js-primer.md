@@ -411,22 +411,6 @@ console.log(firstPerson); // outputs "Link"
 console.log(secondPerson; // outputs "Zelda"
 ```
 
-And, destructuring can be used to assign values without a declaration using destructuring expressions:
-
-```javascript
-let person = {
-  firstName: "Tom",
-  lastName: "Dale"
-};
-
-let firstName = "Yehuda";
-let lastName = "Katz";
-
-( {firstName, lastName} = person );
-```
-
-Note the parenthesis around the curly braces surrounding the assignment statement and the lack of the variable declaration `let`. This denotes the destructuring is an expression instead of a declaration. Because such destructuring assignments are expressions they can be used any where a value is expected, such as in passing a value to a function.
-
 Default values can also be assigned to variables in destructuring to prevent them from being undefined:
 
 ```javascript
@@ -435,7 +419,7 @@ let person = {
   lastName: "Bluth"
 };
 
-let {firstName = "George", middleName= "Oscar", lastName = "Bluth"} = person;
+let {firstName= "George", middleName= "Oscar", lastName= "Bluth"} = person;
 
 console.log(middleName); // outputs "Oscar"
 ```
@@ -453,7 +437,7 @@ let person =
     }
   };
 
-let { family: familyMembers, family: {siblings:[sister]} } = person;
+let { family:familyMembers, family: {siblings:[sister]} } = person;
 
 console.log(familyMembers.mother); // outputs "Jane Smith"
 console.log(sister); // outputs "Lindsay Bluth Fünke"
