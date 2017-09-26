@@ -23,7 +23,7 @@ Note that such hoisting only applies to a variable's declaration, not its initia
 
 Because of hoisting, classic `var` variable declarations in JavaScript can sometimes be tricky and create confusion over a variable's life cycle.
 
-Let's take a look at an example of hoisting with `var`:  
+Lets take a look at an example of hoisting with `var`:  
 
 ``` javascript
 function getName(person) {
@@ -143,7 +143,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let
 One quirk of the JavaScript language that commonly trips up developers if that if you define an array or object property directly in your class,
 every instance of that class will share the same array/object.
 
-Let"s look at an example.
+Lets look at an example.
 
 We will start with a `Framework` class.
 `Framework` has two properties, a `language` string, and a `versions` array.
@@ -183,7 +183,9 @@ export default Ember.Component.extend({
 
 ## Arrow Functions
 
-You may have noticed the new arrow function `=>` syntax, but not fully grasped its purpose. Arrow functions introduce a more concise syntax for functions, but they also have a number of differences from classic JavaScript functions.
+You may have noticed the new arrow function `=>` syntax, but not fully grasped its purpose.
+Arrow functions introduce a more concise syntax for functions,
+but they also have a number of differences from classic JavaScript functions.
 
 Arrow functions:
 
@@ -369,6 +371,7 @@ let person = {
 let firstName = person.firstName;
 let lastName = person.lastName;
 ```
+
 In ES6 with destructuring this can be achieved with less ceremony:
 
 ```javascript
@@ -388,6 +391,7 @@ On the right-hand side of the assignment is a reference to the object being dest
 On the left-hand side of the assignment are the values to be unpacked from the sourced variable.
 
 Note that in above example the variable has the same as the property on the object. This is similar to the property initializer syntax discussed in object literals. However, this does not have to be the case, you can assign to new variable names. For example:
+
 ```javascript
 let person = {
   firstName: "Tom",
@@ -419,12 +423,21 @@ let person = {
   lastName: "Bluth"
 };
 
+<<<<<<< HEAD
 let {firstName= "George", middleName= "Oscar", lastName= "Bluth"} = person;
+=======
+let {
+  firstName = "George",
+  middleName = "Oscar",
+  lastName = "Bluth"
+} = person;
+>>>>>>> b0111bcbe35ba41959d8a1a18d3dfa0dd376926b
 
 console.log(middleName); // outputs "Oscar"
 ```
 
 And, destructuring can be used to unpack more complicated structures like nested objects and arrays:
+
 ```javascript
 let person =
   {
@@ -432,12 +445,21 @@ let person =
     family: {
       mother: "Jane Smith",
       father: "George Oscar Bluth, Sr.",
-      siblings: ["Lindsay Bluth Fünke","George Oscar Bluth II"],
+      siblings: [ "Lindsay Bluth Fünke","George Oscar Bluth II" ],
       child: "George Michael Bluth"
     }
   };
 
+<<<<<<< HEAD
 let { family:familyMembers, family: {siblings:[sister]} } = person;
+=======
+let {
+  family: familyMembers,
+  family: {
+    siblings: [ sister ]
+  }
+} = person;
+>>>>>>> b0111bcbe35ba41959d8a1a18d3dfa0dd376926b
 
 console.log(familyMembers.mother); // outputs "Jane Smith"
 console.log(sister); // outputs "Lindsay Bluth Fünke"
