@@ -423,7 +423,7 @@ let person = {
   lastName: "Bluth"
 };
 
-let {firstName= "George", middleName= "Oscar", lastName= "Bluth"} = person;
+let {firstName = "George", middleName= "Oscar", lastName = "Bluth"} = person;
 
 console.log(middleName); // outputs "Oscar"
 ```
@@ -442,7 +442,7 @@ let person =
     }
   };
 
-let { family:familyMembers, family: {siblings:[sister]} } = person;
+let { family: familyMembers, family: {siblings: [sister]} } = person;
 
 console.log(familyMembers.mother); // outputs "Jane Smith"
 console.log(sister); // outputs "Lindsay Bluth Fünke"
